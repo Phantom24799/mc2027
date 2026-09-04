@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MC2027 · 关于</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, sans-serif;
+            background: #0d0f14;
+            color: #e6e6e6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 30px 20px 60px;
+        }
+        .container {
+            max-width: 880px;
+            width: 100%;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0 20px;
+            border-bottom: 2px solid #1e222a;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7b731, #e8850c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .navbar .nav-links a {
+            color: #8892a0;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .navbar .nav-links a:hover {
+            background: #1f242e;
+            color: #f5a623;
+        }
+        .navbar .nav-links a.active {
+            background: #f5a623;
+            color: #0d0f14;
+        }
+
+        .content {
+            padding: 40px 0;
+        }
+        .card {
+            background: #181c24;
+            border-radius: 18px;
+            padding: 40px 36px;
+            border: 1px solid #2a2f3a;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .card h1 {
+            font-size: 40px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7b731, #e8850c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+        .card .subhead {
+            font-size: 16px;
+            color: #8892a0;
+            margin-bottom: 28px;
+        }
+        .card h2 {
+            font-size: 22px;
+            color: #f0e6d0;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #b0b8c8;
+            margin-bottom: 10px;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card ul li {
+            font-size: 16px;
+            line-height: 2;
+            color: #b0b8c8;
+            padding-left: 24px;
+            position: relative;
+        }
+        .card ul li::before {
+            content: "▸ ";
+            color: #f5a623;
+            position: absolute;
+            left: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #1e222a;
+            color: #5a6270;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #8892a0;
+            text-decoration: none;
+            border-bottom: 1px dashed #3a4050;
+        }
+        .footer a:hover {
+            color: #f5a623;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .navbar .nav-links {
+                justify-content: center;
+            }
+            .card h1 {
+                font-size: 28px;
+            }
+            .card {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+            <a href="index.html" class="logo">⛏️ MC2027</a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="updatelog.html">更新日志</a>
+                <a href="about.html" class="active">关于</a>
+                <a href="downloads.html">下载</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="card">
+                <h1>ℹ️ 关于 MC2027</h1>
+                <p class="subhead">了解我们的服务器</p>
+
+                <h2>🎯 服务器定位</h2>
+                <p>
+                    MC2027 是一个基于 <strong>Minecraft 26.2</strong> 版本的公益生存服务器。
+                    我们致力于为玩家提供 <strong>纯净、稳定、公平</strong> 的游戏环境，
+                    不设付费特权，不卖影响平衡的道具。
+                </p>
+
+                <h2>🛠️ 特色玩法</h2>
+                <ul>
+                    <li>原汁原味的生存模式，无过度魔改</li>
+                    <li>稳定的服务器性能，流畅的 TPS 体验</li>
+                    <li>定期活动与建筑比赛，丰富社区生活</li>
+                    <li>活跃（？）的管理团队，及时处理问题</li>
+                </ul>
+
+                <h2>👥 管理团队</h2>
+                <p>
+                    服务器由一群热爱 Minecraft 的玩家共同维护。
+                    我们欢迎每一位新朋友的加入，也期待老玩家的长期陪伴。
+                </p>
+
+                <h2>📌 加入我们</h2>
+                <p>
+                    服务器地址：<strong style="color:#f5a623;">mc2027.cc.cd</strong><br />
+                    版本要求：Java版 26.2（无需正版验证）
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            💡 在 GitHub 给个Star✨？ &nbsp;·&nbsp;
+            <a href="https://github.com/phantom24799/phantom24799.github.io" target="_blank">phantom24799/phantom24799.github.io ↗</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
