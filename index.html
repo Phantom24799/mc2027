@@ -1,11 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>我的第一个网站</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MC2027 · 首页</title>
+    <!-- ===== 共用样式（所有页面统一） ===== -->
+    <style>
+        /* ----- 全局重置 ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, sans-serif;
+            background: #0d0f14;
+            color: #e6e6e6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 30px 20px 60px;
+        }
+
+        .container {
+            max-width: 880px;
+            width: 100%;
+        }
+
+        /* ----- 导航栏（所有页面共用） ----- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0 20px;
+            border-bottom: 2px solid #1e222a;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7b731, #e8850c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .navbar .nav-links a {
+            color: #8892a0;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .navbar .nav-links a:hover {
+            background: #1f242e;
+            color: #f5a623;
+        }
+
+        .navbar .nav-links a.active {
+            background: #f5a623;
+            color: #0d0f14;
+        }
+
+        /* ----- 页面内容卡片 ----- */
+        .content {
+            padding: 40px 0;
+        }
+
+        .card {
+            background: #181c24;
+            border-radius: 18px;
+            padding: 40px 36px;
+            border: 1px solid #2a2f3a;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h1 {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7b731, #e8850c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .card .subhead {
+            font-size: 18px;
+            color: #8892a0;
+            margin-bottom: 28px;
+        }
+
+        /* ----- 服务器地址块 ----- */
+        .server-block {
+            background: #11141c;
+            border-radius: 14px;
+            padding: 24px 28px;
+            text-align: center;
+            border: 1px solid #2a2f3a;
+            margin: 16px 0 10px;
+        }
+
+        .server-block .label {
+            font-size: 13px;
+            color: #8892a0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .server-block .address {
+            font-size: 38px;
+            font-weight: 700;
+            color: #f5a623;
+            font-family: 'Courier New', monospace;
+            margin: 6px 0;
+            word-break: break-all;
+        }
+
+        .server-block .status {
+            display: inline-block;
+            background: #2d8a4e;
+            color: #b8f0c8;
+            padding: 4px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #1e222a;
+            color: #5a6270;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #8892a0;
+            text-decoration: none;
+            border-bottom: 1px dashed #3a4050;
+        }
+        .footer a:hover {
+            color: #f5a623;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .navbar .nav-links {
+                justify-content: center;
+            }
+            .card h1 {
+                font-size: 32px;
+            }
+            .server-block .address {
+                font-size: 24px;
+            }
+            .card {
+                padding: 24px 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>🎉 成功啦！</h1>
-    <p>这是我的第一个免费网站</p>
+
+    <div class="container">
+
+        <!-- ===== 导航栏 ===== -->
+        <nav class="navbar">
+            <a href="index.html" class="logo">⛏️ MC2027</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">首页</a>
+                <a href="updatelog.html">更新日志</a>
+                <a href="about.html">关于</a>
+                <a href="downloads.html">下载</a>
+            </div>
+        </nav>
+
+        <!-- ===== 首页内容 ===== -->
+        <div class="content">
+            <div class="card">
+                <h1>欢迎来到 MC2027</h1>
+                <p class="subhead">⚡ 高版本生存服务器 · 纯净体验</p>
+
+                <div class="server-block">
+                    <div class="label">🖥️ 服务器地址</div>
+                    <div class="address">mc2027.cc.cd</div>
+                    <div class="status">● 在线运行中</div>
+                </div>
+
+                <p style="color:#8892a0; font-size:16px; margin-top:24px; line-height:1.8;">
+                    欢迎加入 MC2027 生存服务器！我们致力于提供稳定、流畅、原汁原味的 Minecraft 生存体验。由R9-5950X强力驱动。<br />
+                    点击上方导航栏浏览更多内容 👆
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== 底部 ===== -->
+        <div class="footer">
+            💡 在 GitHub 上给一个Star✨？ &nbsp;·&nbsp;
+            <a href="https://github.com/phantom24799/phantom24799.github.io" target="_blank">phantom24799/phantom24799.github.io ↗</a>
+        </div>
+
+    </div>
+
 </body>
 </html>
