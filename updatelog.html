@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MC2027 · 更新日志</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, sans-serif;
+            background: #0d0f14;
+            color: #e6e6e6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 30px 20px 60px;
+        }
+        .container {
+            max-width: 880px;
+            width: 100%;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0 20px;
+            border-bottom: 2px solid #1e222a;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7b731, #e8850c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .navbar .nav-links a {
+            color: #8892a0;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .navbar .nav-links a:hover {
+            background: #1f242e;
+            color: #f5a623;
+        }
+        .navbar .nav-links a.active {
+            background: #f5a623;
+            color: #0d0f14;
+        }
+
+        .content {
+            padding: 40px 0;
+        }
+        .card {
+            background: #181c24;
+            border-radius: 18px;
+            padding: 40px 36px;
+            border: 1px solid #2a2f3a;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .card h1 {
+            font-size: 40px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7b731, #e8850c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+        .card .subhead {
+            font-size: 16px;
+            color: #8892a0;
+            margin-bottom: 28px;
+        }
+
+        .changelog {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .log-item {
+            background: #11141c;
+            border-radius: 14px;
+            padding: 18px 24px;
+            border-left: 4px solid #f5a623;
+            transition: background 0.2s;
+        }
+        .log-item:hover {
+            background: #1a1e28;
+        }
+        .log-item .date {
+            font-size: 14px;
+            color: #8892a0;
+            font-weight: 500;
+        }
+        .log-item .content {
+            font-size: 17px;
+            margin-top: 4px;
+            line-height: 1.6;
+        }
+        .log-item .content .tag {
+            display: inline-block;
+            padding: 0 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            margin-right: 8px;
+        }
+        .log-item .content .tag.add {
+            background: #1e4a2f;
+            color: #8cdba8;
+        }
+        .log-item .content .tag.fix {
+            background: #4a2a2a;
+            color: #f0a0a0;
+        }
+        .log-item .content .tag.update {
+            background: #2a3a5a;
+            color: #90b8f0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #1e222a;
+            color: #5a6270;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #8892a0;
+            text-decoration: none;
+            border-bottom: 1px dashed #3a4050;
+        }
+        .footer a:hover {
+            color: #f5a623;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .navbar .nav-links {
+                justify-content: center;
+            }
+            .card h1 {
+                font-size: 28px;
+            }
+            .card {
+                padding: 24px 18px;
+            }
+            .log-item {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+            <a href="index.html" class="logo">⛏️ MC2027</a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="updatelog.html" class="active">更新日志</a>
+                <a href="about.html">关于</a>
+                <a href="downloads.html">下载</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="card">
+                <h1>📰 更新日志</h1>
+                <p class="subhead">记录 MC2027 服务器的每一次变化</p>
+
+                <div class="changelog">
+
+                    <!-- ====== 在这里添加/编辑日志条目 ====== -->
+                    <div class="log-item">
+                        <div class="date">2026-09-04</div>
+                        <div class="content">
+                            <span class="tag add">新增</span>
+                            服务器正式上线，开放生存服26.2 版本
+                        </div>
+                    </div>
+
+                    <div class="log-item">
+                        <div class="date">2026-09-03</div>
+                        <div class="content">
+                            <span class="tag update">更新</span>
+                            输入/cd可以打开服务器世界传送菜单
+                        </div>
+                    </div>
+
+                    <div class="log-item">
+                        <div class="date">2026-09-01</div>
+                        <div class="content">
+                            <span class="tag fix">修复</span>
+                            修复了一些问题
+                        </div>
+                    </div>
+
+                    <!-- ====== 在此下方继续添加新日志 ====== -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            💡 在 GitHub 上给个Star✨？ &nbsp;·&nbsp;
+            <a href="https://github.com/phantom24799/phantom24799.github.io" target="_blank">phantom24799/phantom24799.github.io ↗</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
